@@ -1,38 +1,51 @@
 import os
 from cryptography.fernet import Fernet
+from colorama import init, Fore
 
-# Fungsi untuk memuat kunci enkripsi dari file
+# Initialize colorama
+init(autoreset=True)
+
+# Function to load encryption key from file
 def load_key():
     return open("secret.key", "rb").read()
 
-# Fungsi untuk mendekripsi file
+# Function to decrypt a file and remove the encrypted file
 def decrypt_file(file_path, key):
-    with open(file_path, 'rb') as file:
-        encrypted_data = file.read()
+    try:
+        with open(file_path, 'rb') as file:
+            encrypted_data = file.read()
 
-    fernet = Fernet(key)
-    decrypted_data = fernet.decrypt(encrypted_data)
+        fernet = Fernet(key)
+        decrypted_data = fernet.decrypt(encrypted_data)
 
-    # Menghapus ekstensi .TomwareENC dan menyimpan file hasil dekripsi
-    decrypted_file_path = file_path.replace('.TomwareENC', '')
-    with open(decrypted_file_path, 'wb') as decrypted_file:
-        decrypted_file.write(decrypted_data)
+        # Remove the .TomwareENC extension and restore the original file
+        original_file_path = file_path.rsplit('.TomwareENC', 1)[0]
+        with open(original_file_path, 'wb') as decrypted_file:
+            decrypted_file.write(decrypted_data)
 
-    print(f"File '{file_path}' telah didekripsi menjadi '{decrypted_file_path}'.")
+        # Remove the encrypted file after decryption
+        os.remove(file_path)
 
-# Fungsi untuk mendekripsi seluruh file dalam folder Downloads
+        print(Fore.GREEN + f"[✓] '{file_path}' has been decrypted and restored to '{original_file_path}'. The encrypted file has been deleted.")
+    except Exception as e:
+        print(Fore.RED + f"[!] Failed to decrypt '{file_path}': {e}")
+
+# Function to decrypt all files in a folder
 def decrypt_folder(folder_path, key):
     for root, dirs, files in os.walk(folder_path):
         for file in files:
-            if file.endswith('.TomwareENC'):  # hanya mendekripsi file yang memiliki ekstensi .TomwareENC
-                file_path = os.path.join(root, file)
+            file_path = os.path.join(root, file)
+            # Only decrypt files with .TomwareENC extension
+            if file_path.endswith('.TomwareENC'):
                 decrypt_file(file_path, key)
 
-# Muat kunci enkripsi
-key = load_key()
+# Run decryption process
+if __name__ == "__main__":
+    # Load the encryption key
+    key = load_key()
 
-# Folder tempat file yang ingin didekripsi, misalnya 'Download'
-folder_to_decrypt = "/storage/emulated/0/targetRS"  # Path folder download pada Android
+    # Folder to decrypt (adjust path as needed)
+    folder_to_decrypt = "/storage/emulated/0/targetRS"  # Path to folder on Android
 
-# Mulai dekripsi semua file dalam folder
-decrypt_folder(folder_to_decrypt, key)
+    # Start the decryption process
+    decrypt_folder(folder_to_decrypt, key)
