@@ -6,13 +6,13 @@
 
 - Encrypt and decrypt files using secure Fernet encryption
 - Works on all major operating systems: Windows, Linux, macOS, and Android (via Termux) with python already installed.
-- Can be triggered via USB Rubber Ducky / Pico Ducky for automated execution. Select the specify payload.dd depending what is your OS target.
+- Can be triggered via USB Rubber Ducky / Pico Ducky for automated execution. Select the specify payload.dd depending on what is your OS target.
 
 ## File Descriptions
 
-- `lock-fernet.py` – Encrypts all files in target folders. You can change the folder directories as you.
-- `unlock-fernet.py` – Decrypts a previously encrypted folders file.
-- `payload.dd` – Ducky Script for executing `lock-fernet.py` using USB Rubber Ducky / Pico Ducky if you used usb hid like USB RUBBER DUCKY by hak5 Or PICO DUCKY by dbisu.
+- `lock-fernet.py` – Encrypts all files in target folders. You can change/edit the target folder directories as you want in 'lock-fernet.py' scripts.
+- `unlock-fernet.py` – Decrypts a previously encrypted folders file.  You can change/edit the target folder directories as you want in 'unlock-fernet.py' scripts. Just like 'lock-fernet.py'.
+- `payload.dd` – Ducky Script for executing `lock-fernet.py` using USB Rubber Ducky / Pico Ducky if you used USB HID Devices like USB RUBBER DUCKY by hak5 Or PICO DUCKY by dbisu.
 - `README.md` – Documentation
 - `LICENSE` – MIT License
 
