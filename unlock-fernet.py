@@ -45,7 +45,7 @@ if __name__ == "__main__":
     key = load_key()
 
     # Folder to decrypt (adjust path as needed)
-    folder_to_decrypt = "/storage/emulated/0/targetRS"  # Path to folder on Android
+    folder_to_decrypt = "/storage/emulated/0/Download"  # Path to folder Download on Android
 
     # Start the decryption process
     decrypt_folder(folder_to_decrypt, key)
